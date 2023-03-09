@@ -1,3 +1,7 @@
+*{
+  color: black;
+}
+
 .App {
   margin-top: 18px;
 }
@@ -46,10 +50,10 @@
 
 }
 
-.toggle-btn {
+/* .toggle-btn {
   align-items: center !important;
   margin-top: 5px !important;
-}
+} */
 
 .add-movie {
   display: flex;
@@ -60,6 +64,14 @@
   margin-bottom: 1rem;
 }
 
-#standard-basic {
-  color: white;
+/* #standard-basic {
+  color: rgb(0, 0, 0);
+/* } */ */
+.error-page{
+  height:85vh;
+  /* width: 100vh; */
+  margin: auto;
+  align-items: center;
+display:flex ;
+justify-content: center;
 }
