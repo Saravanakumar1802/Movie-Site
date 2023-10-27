@@ -1,5 +1,7 @@
-*{
+* {
   color: black;
+  margin: 0 !important;
+
 }
 
 .App {
@@ -8,8 +10,7 @@
 
 .movie-container {
   /* background-color: brown; */
-  width: 390px;
-  margin-top: 1rem;
+  /* width: 390px; */
 }
 
 .movie-detail {
@@ -20,7 +21,7 @@
 }
 
 .movie-poster {
-  height: 650px;
+  height: 500px;
   width: 100%;
   object-fit: cover;
 }
@@ -32,6 +33,7 @@
 
 .movie-rating {
   font-size: 18px;
+
 }
 
 .movie-summary {
@@ -45,8 +47,10 @@
   justify-content: space-evenly; */
 
   display: grid;
+  /* RAM Technique👇 */
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 3rem;
+  gap: 16px;
+  padding: 16px;
 
 }
 
@@ -54,24 +58,60 @@
   align-items: center !important;
   margin-top: 5px !important;
 } */
-
+h4{
+  color: antiquewhite;
+  letter-spacing: 2px;
+  /* padding-right: 10px; */
+}
 .add-movie {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  margin: 0 auto !important;
+  margin-top: 2rem !important;
 }
 
 /* #standard-basic {
   color: rgb(0, 0, 0);
-/* } */ */
-.error-page{
-  height:85vh;
+/* } */
+*/ .error-page {
+  height: 85vh;
   /* width: 100vh; */
   margin: auto;
   align-items: center;
-display:flex ;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.trailer-title {
+  max-width: 990px;
+  margin-top: 15px !important;
+}
+
+#standard-basic {
+  color: rgb(49, 109, 221) !important;
+}
+
+.back-btn {
+  margin-top: 15px !important;
+}
+
+.info-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container img{
+  max-width: 100%;
+  height: auto;
+  position: static;
+}
+.home-container h1{
+  position: absolute;
+  color: white;
+  /* padding-left: 46rem; */
+  left: 38%;
+
 }

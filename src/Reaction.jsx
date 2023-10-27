@@ -1,28 +1,35 @@
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export function Reaction() {
-    const [like, setLike] = useState(43);
-    const [dislike, setDislike] = useState(15);
+    const [like, setLike] = useState(34);
+    const [dislike, setDislike] = useState(12);
 
     return (
         <div className="App">
-            <Badge badgeContent={like} color="primary">
-                <IconButton onClick={() => { setLike(like + 1); }} aria-label="fingerprint" color="primary">
+            <IconButton aria-label="delete">
+                <DeleteIcon />
+            </IconButton>
+
+            <IconButton onClick={() => { setLike(like + 1); }} aria-label="like" color="primary">
+                <Badge badgeContent={like} color="primary">
                     {/* <Fingerprint /> */}
                     👍
-                </IconButton>
-            </Badge>
+                </Badge>
+            </IconButton>
 
 
-
-            <Badge badgeContent={dislike} color="error">
-                <IconButton onClick={() => { setDislike(dislike + 1); }} aria-label="fingerprint" color="error">
-                    {/* <Fingerprint /> */}
+            <IconButton onClick={() => { setDislike(dislike + 1); }} aria-label="dislike" color="error">
+                {/* <Fingerprint /> */}
+                <Badge badgeContent={dislike} color="error">
                     👎
-                </IconButton>
-            </Badge>
+                </Badge>
+            </IconButton>
+
+
+
 
 
         </div>

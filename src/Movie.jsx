@@ -8,6 +8,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import InfoIcon from '@mui/icons-material/Info';
 import { useNavigate } from 'react-router-dom';
+import { CardActions } from '@mui/material';
 
 
 
@@ -39,13 +40,14 @@ export function Movie({ movie, id }) {
                 <div className="movie-detail">
                     <h2 className="movie-title">{movie.name}
 
-                        <IconButton className='toggle-btn' variant="outlined" color="primary" onClick={() => { setToggle(!toggle); }}>
+                        <IconButton className='toggle-btn' variant="outlined" color="dark" onClick={() => { setToggle(!toggle); }}>
+                            {/* Conditional Rendering */}
 
                             {toggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
 
                         </IconButton>
 
-                        <InfoIcon className='toggle-btn' variant="outlined" color="primary" onClick={() => { navigate(`/movies/${id}`) }}>
+                        <InfoIcon className='toggle-btn' variant="outlined" color="dark" onClick={() => { navigate(`/movies/${id}`) }}>
 
 
                         </InfoIcon>
@@ -57,7 +59,10 @@ export function Movie({ movie, id }) {
                 {/* Conditional Rendering */}
                 {toggle ? <p className="movie-summary">{movie.summary}</p> : null}
             </CardContent>
-            <Reaction />
+            
+            <CardActions>
+                <Reaction />
+            </CardActions>
 
         </div></Card>
     );

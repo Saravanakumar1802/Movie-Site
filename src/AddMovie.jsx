@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
+import SendIcon from '@mui/icons-material/Send';
+import "./App.css"
+import { Margin } from '@mui/icons-material';
 
 
 export function AddMovie({ setMovieData, MovieData }) {
@@ -35,8 +38,8 @@ export function AddMovie({ setMovieData, MovieData }) {
                     setMovieData([...MovieData, newMovie]);
                     // navigate(-1)
                     navigate("/movies")
-                }}
-                    className='toggle-btn' variant="contained" color="primary">Add Movie</Button>
+                }} className='toggle-btn' endIcon={<SendIcon />} variant="contained">Add Movie
+                </Button>
             </div>
 
 
